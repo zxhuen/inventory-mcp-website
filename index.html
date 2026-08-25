@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synapse &bull; Neural Chat UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Ambient background glow elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <main class="chat-wrapper">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="agent-info">
+                <div class="avatar-ring">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-core">AI</div>
+                </div>
+                <div class="agent-meta">
+                    <h1 class="agent-name">Neural Core <span class="badge">v2.4</span></h1>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Online & Ready</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Message Feed -->
+        <section class="messages-container" id="messagesContainer">
+            <div class="message-group bot-msg">
+                <div class="message-bubble">
+                    Hello! Systems are operational. How can I assist you today?
+                </div>
+                <span class="message-timestamp">Just now</span>
+            </div>
+
+            <!-- Typing Indicator Template -->
+            <div class="message-group bot-msg typing-row hidden" id="typingIndicator">
+                <div class="message-bubble typing-bubble">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Input Bar -->
+        <footer class="chat-input-area">
+            <form id="chatForm" class="input-form">
+                <input type="text" id="userInput" placeholder="Ask a question or issue a command..." autocomplete="off" required />
+                <button type="submit" id="sendBtn" class="send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+            </form>
+        </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
